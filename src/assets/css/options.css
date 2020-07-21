@@ -1,0 +1,8 @@
+.sidebar-userlist {
+    overflow-y: scroll !important;
+}
+
+
+.conversation-panel__body{
+    overflow-y: scroll !important;
+}

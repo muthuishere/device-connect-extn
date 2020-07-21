@@ -1,0 +1,29 @@
+{
+  "name": "device-connect-extension-updated",
+  "version": "0.0.1",
+  "description": "An Application with device connects",
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.bundle.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-32.png"
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "permissions": ["contextMenus"],
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+    "js": ["contentScript.bundle.js"],
+    "css": ["content.styles.css"]
+  }],
+  "web_accessible_resources": [
+    "content.styles.css",
+    "icon-128.png",
+    "icon-32.png"
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
